@@ -15,9 +15,20 @@ const App = () => {
     "/src/assets/images/image-11.jpeg",
   ]);
 
+
+// image delete operation implement here.
+const handleDelete =()=>{
+  const remainingImages = images.filter(
+    (_, index) => !selected.includes(index)
+  );
+  setImages(remainingImages);
+  setSelected([]);
+}
+
+
   // selected image state
   const [selected, setSelected] = useState([]);
-  // console.log(selected);
+ 
 
   // This function is for checking image selection.
   const targetImage = (index) => {
@@ -37,7 +48,7 @@ const App = () => {
             <h1 className="text-xl flex items-center gap-2">
               <ImCheckboxChecked /> {selected.length} { selected.length >1 ? "files": "file"} Selected
             </h1>
-            <button>Delete { selected.length >1 ? "files": "file"}</button>
+            <button onClick={handleDelete}>Delete { selected.length >1 ? "files": "file"}</button>
             </div>
           ) : (
             <h1 className="text-xl">Gallery</h1>
@@ -56,14 +67,14 @@ const App = () => {
                 src={img}
                 alt=""
                 className={`max-w-full max-h-max ${
-                  selected.includes(index) ? "blur-sm" : ""
+                  selected.includes(index) ? "blur-[2px]" : ""
                 }`}
               />
 
               <input
                 type="checkbox"
                 className=" hidden absolute top-2 left-2 cursor-pointer group-hover:block h-7 w-5 checked:block"
-                // checked={selected.includes(index)}
+                checked={selected.includes(index)}
                 onChange={() => targetImage(index)}
               />
             </div>
