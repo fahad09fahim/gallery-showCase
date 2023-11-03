@@ -1,20 +1,19 @@
 import { useState } from "react";
 import { ImCheckboxChecked } from "react-icons/im";
 
-
 const App = () => {
   const [images, setImages] = useState([
-    "/src/assets/images/image-1.webp",
-    "/src/assets/images/image-2.webp",
-    "/src/assets/images/image-3.webp",
-    "/src/assets/images/image-4.webp",
-    "/src/assets/images/image-5.webp",
-    "/src/assets/images/image-6.webp",
-    "/src/assets/images/image-7.webp",
-    "/src/assets/images/image-8.webp",
-    "/src/assets/images/image-9.webp",
-    "/src/assets/images/image-10.jpeg",
-    "/src/assets/images/image-11.jpeg",
+    "https://i.ibb.co/FKsQ5BL/image-1.webp",
+    "https://i.ibb.co/5T9d9V3/image-2.webp",
+    "https://i.ibb.co/MfvkwgD/image-3.webp",
+    "https://i.ibb.co/PCmHbY3/image-4.webp",
+    "https://i.ibb.co/G7J1gdv/image-5.webp",
+    "https://i.ibb.co/GcnThWT/image-6.webp",
+    "https://i.ibb.co/Pzmkdkm/image-7.webp",
+    "https://i.ibb.co/jJJcdWQ/image-8.webp",
+    "https://i.ibb.co/7NLYxzc/image-9.webp",
+    "https://i.ibb.co/MVp6s6t/image-10.jpg",
+    "https://i.ibb.co/DVbShPM/image-11.jpg",
   ]);
 
   // selected image state
@@ -93,7 +92,7 @@ const App = () => {
                   selected.includes(index) ? "blur-[0.5px] " : ""
                 }`}
               />
-               
+
               <input
                 type="checkbox"
                 className=" hidden absolute top-2 left-2 cursor-pointer group-hover:block h-7 w-5 checked:block"
@@ -105,7 +104,7 @@ const App = () => {
 
           <img
             className="border-2 border-gray-400 rounded p-5 border-dotted"
-            src="/src/assets/images/addImage.jpg"
+            src="https://i.ibb.co/By3GL9r/addImage.jpg"
             alt=""
           />
         </div>
